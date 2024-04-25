@@ -1,0 +1,14 @@
+ 
+        Label(self, text="Pick UP Point", bg="pink3", font=("TIMES NEW ROMAN", 16)).place(x=175,y=150)
+        self.pickup_var = StringVar()
+        self.pickup_menu = ttk.Combobox(self, textvariable=self.pickup_var)
+        self.pickup_menu.place(x=350,y=150)
+
+
+
+
+ Label(self, text="Dropping Point", bg="pink3", font=("TIMES NEW ROMAN", 16)).place(x=175,y=250)
+        self.drop_var = StringVar()
+        self.drop_var.trace('w', self.update_price_range)
+        self.drop_menu = ttk.Combobox(self, textvariable=self.drop_var)
+        self.drop_menu.place(x=350,y=250)
